@@ -6,8 +6,8 @@ This project:
 * Utilizes JavaScript fetch method for dynamic loading of JSON data from NoSQL database
 * Supports dynamic dark/light mode themes, and dynamic resizing for mobile, tablet, or desktop
 * Frontend created without frameworks - using only HTML5, CSS3, and JavaScript ES6
-* Backend hosted on Google Cloud Platform's Cloud Storage and Firebase Realtime Database
-* Uses custom domain: edwardboado.dev [NOTE: custom domain server temporarily disconnected due to excessive Compute Engine costs.] 
+* Backend images and project data hosted on Google Cloud Platform's Cloud Storage and Firebase Realtime Database
+* Uses custom domain: edwardboado.dev 
 
 ### [Go to Portfolio Website](https://www.edwardboado.dev)
 
