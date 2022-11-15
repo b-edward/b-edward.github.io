@@ -1,0 +1,53 @@
+/* Styling for contact section */
+.contactSection {
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+}
+
+.contactSection .contact-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.contactSection .contact-container .contact{
+    flex:1 1 25rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15%;
+    margin-bottom: 5%;
+}
+
+.contactSection .contact-container .contact img{
+    width: 10%;
+    height: auto;
+    object-fit: cover;
+    margin: 4.5%;
+}
+
+
+/* Contact style for smaller devices */
+@media screen and (max-width: 750px) {  
+    .contactSection .contact-container .contact{
+        padding-left: 15%;
+    }
+
+    .contactSection .contact-container .contact img{
+        width: 20%;
+        margin: 10%;
+    }
+}
+
+
+  /* Nav style for smaller devices in landscape */
+  @media screen and (max-height: 450px) {     
+    .contactSection .contact-container .contact{
+        padding-left: 15%;
+    }
+    
+    .contactSection .contact-container .contact img{
+        width: 11%;
+        margin: 4.5%;
+    }
+}

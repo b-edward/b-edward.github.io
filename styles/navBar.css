@@ -1,0 +1,185 @@
+/* Variables for colour scheme */
+:root{
+    --color-accent-dark:#004aad;
+    --color-accent-light:#38b6ff;
+    --color-background-dark:#232323;
+    --color-background-light:white;
+    --color-text-dark:#232323;
+    --color-text-light:#ccc;
+    --color-link-hover:#004aad;
+    --color-header-background-light:#232323;
+    --color-header-background-dark:#004aad;
+    --color-header-text-light:#ccc;
+    --color-header-text-dark:#ccc;
+    --color-title:#232323;
+  }
+  
+*::selection{
+background:var(--color-accent-dark);
+color:#fff;
+}
+
+/* Styling for main page body */
+html, body {
+    background:var(--color-background-light);
+    margin: 0;
+    padding: 0;
+    font-family: 'Istok Web', sans-serif;
+}
+
+/* Styling for navigation bar */
+header {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--color-header-background-light);
+    color: var(--color-header-text-light);
+    position: fixed; 
+    top: 0; 
+    opacity: 1;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    position:absolute;
+    right: 0;
+    width: 50vw;
+    transition-duration: 0ms;
+}
+
+/* Nav section links */
+.navlink {
+    list-style: none;
+    text-align: center;
+}
+
+.navlink a {
+    color: var(--color-header-text-light);
+    text-decoration: none;
+    margin-top: .2vh;
+    font-size: 2.8vh;
+}
+
+.navlink a:hover{
+    color:var(--color-link-hover);
+}
+
+/* Nav menu toggle button for smaller devices */
+#navImage {
+    position:absolute;
+    max-height: 100%;
+    height: auto;
+    margin-top: .2vh;
+    display: none;
+    right: 5%;
+}
+
+/* Main title/name */
+#navTitle { 
+    position:absolute;
+    letter-spacing: 3px;
+    color: var(--color-header-text-light);
+    text-decoration: none;
+    font-size: 2.8vh;
+    left: 3%;
+    margin-right: 2rem;
+}
+
+/* Styling for page section titles */
+h2 {
+    text-align: center;   
+    margin: 5%; 
+    font-size: 4vw;
+    color:var(--color-title);
+    letter-spacing: 2px;
+    text-shadow: 1.5px 1.5px #004aad;
+}
+
+/* Styling for home section */
+#logo-container {    
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 100vh;
+}
+
+#logo {  
+    max-width: 45%;
+    height: auto;
+    margin: 7%;
+}
+
+/* Nav style for small-medium devices */
+@media screen and (max-width: 1250px) {    
+    #navImage {
+        display: block;
+    }
+
+    #nav {
+        right: -50%;        
+        margin: 0;
+        background: var(--color-header-background-light);
+        position: fixed;
+        top: 70px;
+        width: 50%;
+        height: calc(70% - 70px);
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+    .navlink {
+        text-align: center;
+    }
+
+    #logo {  
+        margin:0%;   
+        max-width: 70%;
+        height: auto;
+    }  
+
+    /* Styling for home section on small device */
+    #logo-container {    
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        height: 100vh;
+    }
+    
+    h2 {
+        font-size: 6vw;
+        max-width: 90%;   
+        padding-top: 8%; 
+    }
+   
+}
+
+
+/* Nav style for smaller devices in landscape */
+@media screen and (max-height: 450px) {     
+    header {
+        height: 10vh;
+    }
+
+    #logo {  
+        margin:0%;   
+        max-width: 50%;
+        height: auto;
+    }  
+    
+    h2 {
+        font-size: 3vw;
+        max-width: 90%;   
+    }
+   
+    .navlink a {
+        font-size: 4.5vh;
+    }
+
+    #navTitle { 
+        font-size: 4.5vh;
+    }
+}

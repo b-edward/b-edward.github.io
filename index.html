@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <!-- Meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Links to external css files --> 
+        <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/edwardboado.dev/styles/projects.css"> 
+        <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/edwardboado.dev/styles/navBar.css">
+        <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/edwardboado.dev/styles/about.css"> 
+        <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/edwardboado.dev/styles/contact.css"> 
+        <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/edwardboado.dev/styles/imagePopup.css"> 
+        
+        <!-- Links for Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet"> 
+
+        <title>Edward's Portfolio</title>    
+    </head>
+    <body>
+        <!-- Nav bar -->
+        <header id="header">
+            <p id="navTitle">Edward Boado</p>
+            <ul id="nav" class="nav-horizontal">
+                <li class="navlink" onclick="CloseNav();"><a href="#home" >Home</a></li>
+                <li class="navlink" onclick="CloseNav();"><a href="#about">About</a></li>
+                <li class="navlink" onclick="CloseNav();"><a href="#projects">Projects</a></li>
+                <li class="navlink" onclick="CloseNav();"><a href="#contact">Contact</a></li>
+            </ul>
+            <img src="https://storage.googleapis.com/edwardboado.dev/images/ui/navButton.png" id="navImage" onclick="ToggleNav();">
+        </header>
+        <!-- Home image -->
+        <div id="home">
+            <div id="logo-container">
+                <img id="logo" alt="Page Logo" src="https://storage.googleapis.com/edwardboado.dev/images/ui/logoLight.png">
+            </div>
+        </div>
+
+        <!-- About Me section -->
+        <div class="aboutSection" id="about">
+            <br>
+            <h2>ABOUT ME</h2>
+            <div class="about-container">
+                <div class="about">
+                    <div class='about-row'>
+                        <div class="aboutLink">
+                            <!-- My picture -->
+                            <img class='column-picture' src="https://storage.googleapis.com/edwardboado.dev/images/ui/edward.jpg" 
+                            alt="Picture of Edward Boado" id="picture">
+                            <!-- My resume -->
+                            <form action="https://storage.googleapis.com/edwardboado.dev/resume/Edward-Boado-Resume-Web.pdf" 
+                                target="_blank" id="formResume">
+                                <input type="submit" value="RESUME" id="btnResume"/>
+                            </form>
+                        </div>
+                        <div class='aboutInfo'>      
+                            <!-- Intro -->                      
+                            <p>Hi, I'm Edward, and I study Software Engineering Technology (Co-op) at Conestoga College in 
+                                Waterloo, Canada. I have a passion for software development and am always playing around with a project.
+                                I have a thirst for knowledge and learn quickly.</p>
+                            <!-- Work -->
+                            <h4 class="aboutHeading">Work</h4>
+                            <ul>
+                                <li>I am currently working at <a href="https://www.geotab.com/" target="_blank">Geotab</a> as a Software Developer intern</li>
+                                <li>I work in a backend development team that maintains and develops the main server that processes more than 
+                                    55 billion data points from over 3 million devices every day!</li>
+                                <li>It is exciting to work in a challenging environment as we continue to scale the product using cutting
+                                    edge technology in Google Cloud and C#/.NET Core</li>
+                                <li>I love working for an innovative company that is helping to promote a more
+                                    sustainable future by helping fleets be more fuel efficient and convert to electric faster!</li>
+                            </ul> 
+                            <!-- School and extra-curricular info -->
+                            <h4 class="aboutHeading">Academic</h4>
+                            <ul>
+                                <li>Achieved 4.0 GPA first year, and 3.91 second year in Software Engineering</li>
+                                <li>Executive Lead in the Google Developer Student Club at Conestoga</li>
+                                <li>Studied at McMaster University and obtained a Bachelor's degree in Political Science & Philosophy, 
+                                    as well as a Certificate in Business Essentials</li>
+                                <li>Experienced team player with excellent communication, organization, problem solving, and critical thinking 
+                                    skills</li>
+                            </ul>
+                            <!-- Personal info -->
+                            <h4 class="aboutHeading">Personal</h4>
+                            <ul>
+                                <li>Enjoys attending workshops, hackathons, and working on personal projects</li>
+                                <li>When not working on software projects, I am usually in the kitchen cooking up a food project</li>
+                                <li>Other activities include hiking, camping, travel, photography, strategy games, and reading science fiction & fantasy</li>                             
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- Projects section -->
+        <div class="projectSection" id="projects">
+            <div id="projects-personal" class="projects-personal">
+                <br>
+                <h2>PERSONAL PROJECTS</h2>
+                <div class="project-container" id="personal">                   
+                    <!-- Dynamically generated personal project info cards -->
+                </div>
+            </div>
+            <div id="projects-school" class="projects-school">
+                <br>
+                <h2>SCHOOL PROJECTS</h2>
+                <div class="project-container" id="school">
+                    <!-- Dynamically generated school project info cards -->
+                </div>  
+            </div>
+        </div>
+
+        <!-- Large popup modal image display -->            
+        <img id="image-trigger" src="" alt="" style="width:100%;max-width:75%">
+        <div id="image-container" class="popup">      
+            <!-- Slide image button -->
+            <div id="previous">
+                <span class="prevImage"><img id="imgPrevious" src="https://storage.googleapis.com/edwardboado.dev/images/ui/prev.png"></a></span>
+            </div>   
+            <!-- Image and caption -->
+            <div id="image-area">
+                <span class="close"><img id="imgClose" src="https://storage.googleapis.com/edwardboado.dev/images/ui/close.png"></span>
+                <img class="popup-content" id="image-display">
+                <div id="caption"></div>
+            </div>     
+            <!-- Slide image button -->
+            <div id="next">
+                <span class="nextImage"><img id="imgNext"src="https://storage.googleapis.com/edwardboado.dev/images/ui/next.png"></a></span>
+            </div>
+         </div>
+
+        <!-- Contact section -->    
+        <div class="contactSection" id="contact">
+            <br>
+            <h2>CONTACT ME</h2>
+            <div class="contact-container">
+                <div class="contact">
+                <!-- Email -->
+                <a href="mailto:eboado8862@conestogac.on.ca" target="_blank"><img 
+                    src="https://storage.googleapis.com/edwardboado.dev/images/ui/email.png" alt="Email"></a>
+                <!-- Social -->
+                <a href="https://www.instagram.com/ediamz" target="_blank"><img 
+                    src="https://storage.googleapis.com/edwardboado.dev/images/ui/instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/edward-boado" target="_blank"><img 
+                    src="https://storage.googleapis.com/edwardboado.dev/images/ui/linkedin.png" alt="LinkedIn"></a>
+                <!-- GitHub -->
+                <a href="https://github.com/b-edward" target="_blank"><img 
+                    src="https://storage.googleapis.com/edwardboado.dev/images/ui/github.png" alt="GitHub" id="github-contact"></a>        
+                </div>
+            </div>
+        </div>  
+        
+        <!-- Links to external javascript files -->
+        <script type="text/javascript" src="https://storage.googleapis.com/edwardboado.dev/scripts/main.js"></script>
+        <script type="text/javascript" src="https://storage.googleapis.com/edwardboado.dev/scripts/projects.js"></script>
+        <script type="text/javascript" src="https://storage.googleapis.com/edwardboado.dev/scripts/imagePopup.js"></script>
+    </body>
+</html>

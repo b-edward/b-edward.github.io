@@ -1,0 +1,194 @@
+/* Styling for projects section */
+.projectSection .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h3 {
+    color: #004aad;
+}
+
+/* Project cards */
+.projectSection .project-container .project {
+    flex:1 1 35rem;
+    overflow: hidden;
+    box-shadow: 0 2rem 2.5rem rgba(0,0,0,.5);
+    margin: 9rem;
+    width: 50%;
+    max-width: 50%;
+}
+
+/* Main thumbnail image */
+.projectSection .project-container .project img {
+    width: 100%;
+    height: auto;
+    max-height: 60%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.projectSection .project-container .project img:hover {
+    padding: 1px;
+}
+
+/* Text content area */
+.projectSection .project-container .project .content {
+    margin: 1.5rem;
+}
+
+.projectSection .project-container .project .content h3 {
+    font-size: 2.3vh;
+    color:var(--color-text-dark);
+}
+
+.projectSection .project-container .project .content li {
+    font-size: 2.3vh;
+    color:var(--color-text-dark);
+    margin-left: -1rem;
+}
+
+/* Project links */
+a:link {
+    color: var(--color-accent-dark);
+}
+
+/* Skill tags */
+.projectSection .project-container .project .content .tags {
+    font-size: 2.3vh;
+    color:var(--color-text-dark);
+}
+
+.projectSection .project-container .project .content .github-project {    
+    width: 10%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 3.5vh;
+    margin-left: 5px;
+}
+
+.tag {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.skillTags {
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* Skill tags colour scheme */
+.skillTags.language {
+    background-color: #4652fd;
+}
+
+.skillTags.framework {
+    background-color: #e0a502;
+}
+
+.skillTags.database {   
+    background-color: #0F9D58;
+}
+
+.skillTags.cloud {
+    background-color: #008ce9;
+}
+
+.skillTags.other {
+    background-color: #F77737;
+}
+
+/* Projects style for large devices */
+@media screen and (max-width: 2000px) {  
+    .projectSection .project-container .project{
+        flex:1 1 35rem;
+        overflow: hidden;
+        box-shadow: 0 2rem 2.5rem rgba(0,0,0,.5);
+        margin: 6rem 12rem;
+        width: 65%;
+        max-width: 65%;
+        min-width: 50%;
+    }
+}
+
+/* Projects style for medium-large devices */
+@media screen and (max-width: 1500px) {  
+    .projectSection .project-container .project{
+        flex:1 1 35rem;
+        overflow: hidden;
+        box-shadow: 0 2rem 2.5rem rgba(0,0,0,.5);
+        margin: 6rem;
+        width: 80%;
+        max-width: 80%;
+    }
+}
+
+/* Projects style for medium devices */
+@media screen and (max-width: 1000px) {  
+    .projectSection .project-container .project{
+        flex:1 1 35rem;
+        overflow: hidden;
+        box-shadow: 0 2rem 2.5rem rgba(0,0,0,.5);
+        margin: 2rem;
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+/* Projects style for smaller devices */
+@media screen and (max-width: 750px) {    
+    .projectSection .project-container .project{    
+        margin-bottom: 2rem;
+        max-width: 90%;
+    }
+
+    .projectSection .project-container .project .content h3 {
+        font-size: 2vh;
+    }
+    
+    .projectSection .project-container .project .content li {
+        font-size: 2vh;
+    }
+
+    .projectSection .project-container .project .content .tags {
+        font-size: 2vh;
+    }
+}
+
+
+/* Nav style for smaller devices in landscape */
+@media screen and (max-height: 450px) {     
+    /* Main thumbnail image */
+    .projectSection .project-container .project img {
+        width: 100%;
+        height: auto;
+        max-height: 50%;
+    }
+    
+    .projectSection .project-container .project .content h3 {
+        font-size: 4.5vh;
+    }
+
+    .projectSection .project-container .project .content li {
+        font-size: 4.3vh;
+        color:var(--color-text-dark);
+    }
+
+    /* Skill tags */
+    .projectSection .project-container .project .content .tags {
+        font-size: 4vh;
+        color:var(--color-text-dark);
+    }
+
+    .projectSection .project-container .project .content .github-project {    
+        width: 7%;
+        height: auto;
+        object-fit: cover;
+        margin-top: 3.5vh;
+        margin-left: 5px;
+    }
+}
