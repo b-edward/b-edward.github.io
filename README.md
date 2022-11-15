@@ -9,7 +9,5 @@ This project:
 * Backend images and project data hosted on Google Cloud Platform's Cloud Storage and Firebase Realtime Database
 * Uses custom https domain: edwardboado.dev 
 
-### [Go to Portfolio Website](https://edwardboado.dev)
-
 
 ![User Interface Example](https://github.com/b-edward/portfolio/blob/main/images/personalProjects/portfolio0.png)
